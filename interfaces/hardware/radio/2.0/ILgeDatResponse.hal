@@ -1,0 +1,11 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.lge.hardware.radio@2.0;
+
+interface ILgeDatResponse {
+    void setRfDatStateResponse(RadioResponseInfo radioResponseInfo) throws RemoteException;
+}

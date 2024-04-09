@@ -1,0 +1,181 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.lge.hardware.radio@2.0;
+
+import android.hardware.radio@1.0::IccIoResult;
+import android.hardware.radio@1.0::RadioResponseInfo;
+import android.hardware.radio@1.5::DataProfileInfo;
+
+interface ILgeRadioResponseV2 {
+    DMRequestResponse(RadioResponseInfo radioResponseInfo, vec<int8_t> arrayList);
+
+    NSRI_Oem_requestProcResponse(RadioResponseInfo radioResponseInfo, vec<int8_t> arrayList);
+
+    NSRI_SetCaptureMode_requestProcResponse(RadioResponseInfo radioResponseInfo, vec<int8_t> arrayList);
+
+    NSRI_requestProcResponse(RadioResponseInfo radioResponseInfo, vec<int8_t> arrayList);
+
+    PBMDeleteRecordResponse(RadioResponseInfo radioResponseInfo, vec<int32_t> arrayList);
+
+    PBMGetInfoResponse(RadioResponseInfo radioResponseInfo, LgePbmRecordInfo lgePbmRecordInfo);
+
+    PBMGetInitStateResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    PBMReadRecordResponse(RadioResponseInfo radioResponseInfo, LgePbmRecords lgePbmRecords);
+
+    PBMWriteRecordResponse(RadioResponseInfo radioResponseInfo, vec<int32_t> arrayList);
+
+    UIMInternalRequestCmdResponse(RadioResponseInfo radioResponseInfo, int32_t i, string str);
+
+    cancelManualSearchingRequestResponse(RadioResponseInfo radioResponseInfo);
+
+    changeCallPreferenceResponse(RadioResponseInfo radioResponseInfo);
+
+    exitVolteE911EmergencyModeResponse(RadioResponseInfo radioResponseInfo);
+
+    getAvailableNetworksResponse(RadioResponseInfo radioResponseInfo, vec<LgeOperatorInfo> arrayList);
+
+    getDataRegistrationStateResponse(RadioResponseInfo radioResponseInfo, DataRegStateResult dataRegStateResult);
+
+    getDataRegistrationStateResponse_1_3(RadioResponseInfo radioResponseInfo, DataRegStateResult_1_4 dataRegStateResult_1_4);
+
+    getEngineeringModeInfoResponse(RadioResponseInfo radioResponseInfo, string str);
+
+    getGPRIItemResponse(RadioResponseInfo radioResponseInfo, string str);
+
+    getIMSNetworkInfoResponse(RadioResponseInfo radioResponseInfo, vec<string> arrayList);
+
+    getInitialAttachApnResponse(RadioResponseInfo radioResponseInfo, DataProfileInfo dataProfileInfo);
+
+    getInitialAttachApnResponse_1_3(RadioResponseInfo radioResponseInfo, android.hardware.radio@1.4::DataProfileInfo dataProfileInfo);
+
+    getLge5GStatusResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    getLteEmmErrorCodeResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    getMipErrorCodeResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    getModemInfoResponse(RadioResponseInfo radioResponseInfo, int32_t i, string str);
+
+    getRssiTestResponse(RadioResponseInfo radioResponseInfo, vec<int32_t> arrayList);
+
+    getSearchStatusResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    getVolteE911NetworkTypeResponse(RadioResponseInfo radioResponseInfo);
+
+    getWifiIMSIForAppResponse(RadioResponseInfo radioResponseInfo, string str);
+
+    getWifiIccCardStatusResponse(RadioResponseInfo radioResponseInfo, LgeCardStatus lgeCardStatus);
+
+    goDormantResponse(RadioResponseInfo radioResponseInfo);
+
+    iccSetTransmitBehaviourResponse(RadioResponseInfo radioResponseInfo);
+
+    lgeAcknowledgeRequest(int32_t i);
+
+    lgeGetCurrentCallsResponse(RadioResponseInfo radioResponseInfo, vec<LgeCall> arrayList);
+
+    lgeGetSignalStrengthResponse(RadioResponseInfo radioResponseInfo, LgeSignalStrength lgeSignalStrength);
+
+    lgeSetNetworkSelectionModeManualResponse(RadioResponseInfo radioResponseInfo);
+
+    loadVolteE911ScanListResponse(RadioResponseInfo radioResponseInfo);
+
+    mocaAlarmEventRegResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    mocaAlarmEventResponse(RadioResponseInfo radioResponseInfo, int8_t b);
+
+    mocaGetDataResponse(RadioResponseInfo radioResponseInfo, LgeModemLoggingData lgeModemLoggingData);
+
+    mocaGetMiscResponse(RadioResponseInfo radioResponseInfo, LgeMocaGetMisc lgeMocaGetMisc);
+
+    mocaGetRFParameterResponse(RadioResponseInfo radioResponseInfo, LgeMocaGetMisc lgeMocaGetMisc);
+
+    mocaSetLogResponse(RadioResponseInfo radioResponseInfo, int8_t b);
+
+    mocaSetMemResponse(RadioResponseInfo radioResponseInfo, vec<int32_t> arrayList);
+
+    notifyImsCallStateResponse(RadioResponseInfo radioResponseInfo);
+
+    reportPdnThrottleIndResponse(RadioResponseInfo radioResponseInfo);
+
+    requestWifiIccSimAuthenticationResponse(RadioResponseInfo radioResponseInfo, IccIoResult iccIoResult);
+
+    sendCallDurationResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    sendE911CallStateResponse(RadioResponseInfo radioResponseInfo);
+
+    sendLgeRequestRawResponse(RadioResponseInfo radioResponseInfo, vec<int8_t> arrayList);
+
+    sendLgeRequestStringsResponse(RadioResponseInfo radioResponseInfo, vec<string> arrayList);
+
+    sendSarPowerStateResponse(RadioResponseInfo radioResponseInfo);
+
+    setApnDisableFlagResponse(RadioResponseInfo radioResponseInfo);
+
+    setApnRoamingDisallowedFlagResponse(RadioResponseInfo radioResponseInfo);
+
+    setCSGSelectionManualResponse(RadioResponseInfo radioResponseInfo, string str);
+
+    setCdmaEriVersionResponse(RadioResponseInfo radioResponseInfo);
+
+    setCdmaFactoryResetResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    setEmergencyResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    setGNOSInfoResponse(RadioResponseInfo radioResponseInfo);
+
+    setImsCallStateForTuneAwayResponse(RadioResponseInfo radioResponseInfo);
+
+    setImsCallStatusResponse(RadioResponseInfo radioResponseInfo);
+
+    setImsDataFlushEnabledResponse(RadioResponseInfo radioResponseInfo);
+
+    setImsRegistrationStatusResponse(RadioResponseInfo radioResponseInfo);
+
+    setLge5GDisabledResponse(RadioResponseInfo radioResponseInfo);
+
+    setLge5GEnabledResponse(RadioResponseInfo radioResponseInfo);
+
+    setLgeEndcControlResponse(RadioResponseInfo radioResponseInfo);
+
+    setLteBandModeResponse(RadioResponseInfo radioResponseInfo);
+
+    setLteDataCallTypeResponse(RadioResponseInfo radioResponseInfo);
+
+    setLteProcResponse(RadioResponseInfo radioResponseInfo);
+
+    setMiMoAntennaControlTestResponse(RadioResponseInfo radioResponseInfo);
+
+    setModemInfoResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    setNSRICallInfoTransferResponse(RadioResponseInfo radioResponseInfo);
+
+    setOtasnPdnStateResponse(RadioResponseInfo radioResponseInfo);
+
+    setPcasInfofaceResponse(RadioResponseInfo radioResponseInfo);
+
+    setPreviousNetworkSelectionModeManualResponse(RadioResponseInfo radioResponseInfo);
+
+    setQcrilResponse(RadioResponseInfo radioResponseInfo);
+
+    setRmnetAutoconnectResponse(RadioResponseInfo radioResponseInfo);
+
+    setRssiTestAntConfResponse(RadioResponseInfo radioResponseInfo, int32_t i, int32_t i2);
+
+    setScmModeResponse(RadioResponseInfo radioResponseInfo);
+
+    setSrvccCallContextTransferResponse(RadioResponseInfo radioResponseInfo);
+
+    setTuneawayResponse(RadioResponseInfo radioResponseInfo);
+
+    setVoiceDomainPrefResponse(RadioResponseInfo radioResponseInfo);
+
+    testLgeRadioInterfaceResponse(RadioResponseInfo radioResponseInfo, int32_t i);
+
+    vssModemResetResponse(RadioResponseInfo radioResponseInfo);
+}

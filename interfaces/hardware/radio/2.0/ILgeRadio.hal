@@ -1,0 +1,181 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.lge.hardware.radio@2.0;
+
+interface ILgeRadio {
+    DMRequest(int32_t i, LgeDmRequest lgeDmRequest);
+
+    NSRI_Oem_requestProc(int32_t i, int32_t i2, vec<int8_t> arrayList);
+
+    NSRI_SetCaptureMode_requestProc(int32_t i, int32_t i2, vec<int8_t> arrayList);
+
+    NSRI_requestProc(int32_t i, int32_t i2, vec<int8_t> arrayList);
+
+    PBMDeleteRecord(int32_t i, int32_t i2, int32_t i3);
+
+    PBMGetInfo(int32_t i, int32_t i2);
+
+    PBMGetInitState(int32_t i);
+
+    PBMReadRecord(int32_t i, int32_t i2, int32_t i3);
+
+    PBMWriteRecord(int32_t i, LgePbmRecords lgePbmRecords);
+
+    UIMInternalRequestCmd(int32_t i, LgeUimInternal lgeUimInternal);
+
+    cancelManualSearchingRequest(int32_t i);
+
+    changeCallPreference(int32_t i, vec<int32_t> arrayList);
+
+    exitVolteE911EmergencyMode(int32_t i);
+
+    getAvailableNetworks(int32_t i);
+
+    getDataRegistrationState(int32_t i);
+
+    getDataRegistrationState_1_3(int32_t i);
+
+    getEngineeringModeInfo(int32_t i, int32_t i2);
+
+    getGPRIItem(int32_t i, int32_t i2);
+
+    getIMSNetworkInfo(int32_t i);
+
+    getInitialAttachApn(int32_t i);
+
+    getInitialAttachApn_1_3(int32_t i);
+
+    getLge5GStatus(int32_t i);
+
+    getLteEmmErrorCode(int32_t i);
+
+    getMipErrorCode(int32_t i);
+
+    getModemInfo(int32_t i, int32_t i2, string str);
+
+    getRssiTest(int32_t i, int32_t i2);
+
+    getSearchStatus(int32_t i);
+
+    getVolteE911NetworkType(int32_t i);
+
+    getWifiIccCardStatus(int32_t i);
+
+    getWifiImsiForApp(int32_t i, string str);
+
+    goDormant(int32_t i, string str);
+
+    iccSetTransmitBehaviour(int32_t i, int32_t i2, boolean z);
+
+    lgeGetCurrentCalls(int32_t i);
+
+    lgeGetSignalStrength(int32_t i);
+
+    lgeSetNetworkSelectionModeManual(int32_t i, string str, string str2);
+
+    loadVolteE911ScanList(int32_t i, int32_t i2, int32_t i3, int32_t i4);
+
+    mocaAlarmEvent(int32_t i, vec<int8_t> arrayList);
+
+    mocaAlarmEventReg(int32_t i, int32_t i2);
+
+    mocaGetData(int32_t i, int32_t i2);
+
+    mocaGetMisc(int32_t i, LgeMocaGetMisc lgeMocaGetMisc);
+
+    mocaGetRFParameter(int32_t i, int32_t i2, int32_t i3);
+
+    mocaSetLog(int32_t i, LgeMocaConfigInfo lgeMocaConfigInfo);
+
+    mocaSetMem(int32_t i, int32_t i2, int32_t i3);
+
+    notifyImsCallState(int32_t i, vec<int32_t> arrayList);
+
+    reportPdnThrottleInd(int32_t i, boolean z);
+
+    requestWifiIccSimAuthentication(int32_t i, int32_t i2, string str, string str2);
+
+    sendCallDuration(int32_t i, int32_t i2);
+
+    sendE911CallState(int32_t i, int32_t i2);
+
+    sendLgeRequestRaw(int32_t i, vec<int8_t> arrayList);
+
+    sendLgeRequestStrings(int32_t i, vec<string> arrayList);
+
+    sendSarPowerState(int32_t i, int32_t i2);
+
+    setApnDisableFlag(int32_t i, int32_t i2, string str, boolean z);
+
+    setApnRoamingDisallowedFlag(int32_t i, int32_t i2, string str, boolean z);
+
+    setCSGSelectionManual(int32_t i, int32_t i2);
+
+    setCdmaEriVersion(int32_t i, int32_t i2);
+
+    setCdmaFactoryReset(int32_t i);
+
+    setDatResponseFunctions(ILgeDatResponse iLgeDatResponse);
+
+    setEmergency(int32_t i, int32_t i2);
+
+    setGNOSInfo(int32_t i, LgeIntString lgeIntString);
+
+    setImsCallStateForTuneAway(int32_t i, vec<int32_t> arrayList);
+
+    setImsCallStatus(int32_t i, vec<int32_t> arrayList);
+
+    setImsDataFlushEnabled(int32_t i, int32_t i2);
+
+    setImsRegistrationStatus(int32_t i, vec<int32_t> arrayList);
+
+    setLge5GDisabled(int32_t i);
+
+    setLge5GEnabled(int32_t i);
+
+    setLgeEndcControl(int32_t i, int32_t i2);
+
+    setLteBandMode(int32_t i, vec<int64_t> arrayList);
+
+    setLteDataCallType(int32_t i, vec<int32_t> arrayList, string str);
+
+    setLteProc(int32_t i, int32_t i2);
+
+    setMiMoAntennaControlTest(int32_t i, int32_t i2, int32_t i3);
+
+    setModemInfo(int32_t i, LgeIntString lgeIntString);
+
+    setNSRICallInfoTransfer(int32_t i, int32_t i2, int32_t i3, string str);
+
+    setOtasnPdnState(int32_t i, int32_t i2);
+
+    setPcasInfo(int32_t i);
+
+    setPreviousNetworkSelectionModeManual(int32_t i, string str, string str2);
+
+    setQcril(int32_t i, int32_t i2);
+
+    setResponseFunctions(ILgeRadioResponseV2 iLgeRadioResponseV2, ILgeRadioIndicationV2 iLgeRadioIndicationV2);
+
+    setRfDatState(int32_t i);
+
+    setRmnetAutoconnect(int32_t i, int32_t i2);
+
+    setRssiTestAntConf(int32_t i, int32_t i2);
+
+    setScmMode(int32_t i, int32_t i2, int32_t i3, int32_t i4);
+
+    setSrvccCallContextTransfer(int32_t i, LgeSrvccCallContextConfig lgeSrvccCallContextConfig);
+
+    setTuneaway(int32_t i, int32_t i2);
+
+    setVoiceDomainPref(int32_t i, int32_t i2);
+
+    testLgeRadioInterface(int32_t i, int32_t i2);
+
+    vssModemReset(int32_t i);
+};

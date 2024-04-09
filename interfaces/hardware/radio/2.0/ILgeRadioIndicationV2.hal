@@ -1,0 +1,123 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package vendor.lge.hardware.radio@2.0;
+
+import android.hardware.radio@1.5;
+
+interface ILgeRadioIndicationV2 {
+    SsacChangeInfoInd(int32_t i, vec<int32_t> arrayList);
+
+    callReady(int32_t i, int32_t i2);
+
+    dataImsPCSCFResoration(int32_t i, ImsPCSCFRestorationVZW imsPCSCFRestorationVZW);
+
+    dataPdnThrottleInfo(int32_t i, DataPdnThrottleIndInfo dataPdnThrottleIndInfo);
+
+    dataQosChanged(int32_t i, LgeDataQosResponse lgeDataQosResponse);
+
+    dqslEvent(int32_t i, int32_t i2);
+
+    handoffInformation(int32_t i, vec<int32_t> arrayList);
+
+    imsPrefStatusInd(int32_t i, vec<int32_t> arrayList);
+
+    lgeCipheringInd(int32_t i, vec<int32_t> arrayList);
+
+    lgeCsfbStatusInfo(int32_t i, vec<int32_t> arrayList);
+
+    lgeCurrentSignalStrength(int32_t i, LgeSignalStrength lgeSignalStrength);
+
+    lgeGsmEncrypInfo(int32_t i, vec<int32_t> arrayList);
+
+    lgeHoStatusInfo(int32_t i, vec<int32_t> arrayList);
+
+    lgeLteCaInd(int32_t i, int32_t i2);
+
+    lgeNetBandInfo(int32_t i, vec<int32_t> arrayList);
+
+    lgeRilConnect(int32_t i);
+
+    lgeUnsol(int32_t i, LgeRpIndResponse lgeRpIndResponse);
+
+    logRfBandInfo(int32_t i, vec<int32_t> arrayList);
+
+    lteAcbInfoInd(int32_t i, vec<int32_t> arrayList);
+
+    lteEmmReject(int32_t i, vec<int32_t> arrayList);
+
+    lteNetworkInfo(int32_t i, vec<int32_t> arrayList);
+
+    lteRejectCause(int32_t i, int32_t i2);
+
+    mmtelResponse(int32_t i, vec<int32_t> arrayList);
+
+    modemResetCompleteInd(int32_t i);
+
+    newSmsOverIms(int32_t i, string str, vec<int8_t> arrayList);
+
+    newSmsStatusReportOverIms(int32_t i, vec<int8_t> arrayList);
+
+    nrNetworkInfo(int32_t i, vec<int32_t> arrayList);
+
+    nrRegistrationInfo(int32_t i, vec<int32_t> arrayList);
+
+    onLgeNrDcParamChange(int32_t i, vec<int32_t> arrayList);
+
+    onLgeNrStatusChange(int32_t i, int32_t i2);
+
+    onUssdMtk(int32_t i, int32_t i2, int32_t i3, string str);
+
+    periodicCsgSearch(int32_t i);
+
+    protocolInfoInd(int32_t i, LgeProtocolInfoUnsolInd lgeProtocolInfoUnsolInd);
+
+    racInd(int32_t i, vec<int32_t> arrayList);
+
+    resimTimeExpired(int32_t i);
+
+    rrcStateInd(int32_t i, int32_t i2);
+
+    sib16TimeReceived(int32_t i, string str, int64_t j);
+
+    smsE911NetworkType(int32_t i, vec<int32_t> arrayList);
+
+    testLgeRadioIndication(int32_t i);
+
+    uiccEventNotify(int32_t i, int32_t i2, string str, string str2);
+
+    voiceCodecIndicator(int32_t i, int32_t i2);
+
+    volteE9111xConnected(int32_t i, vec<int32_t> arrayList);
+
+    volteE911NetworkType(int32_t i, vec<int32_t> arrayList);
+
+    volteEmergencyAttachInfo(int32_t i, vec<int32_t> arrayList);
+
+    volteEmergencyCallFailCause(int32_t i, vec<int32_t> arrayList);
+
+    volteLteConnectionStatus(int32_t i, vec<int32_t> arrayList);
+
+    volteScmInformation(int32_t i, vec<int32_t> arrayList);
+
+    vssMocaAlaramEvent(int32_t i, LgeMocaConfigInfo lgeMocaConfigInfo);
+
+    vssMocaMemLimit(int32_t i, int32_t i2);
+
+    vssMocaMiscNoti(int32_t i, LgeMocaConfigInfo lgeMocaConfigInfo);
+
+    vssNsriNotiMsg(int32_t i, LgeNsriNotice lgeNsriNotice);
+
+    vzwReservedPcoInfo(int32_t i, vec<int32_t> arrayList);
+
+    wcdmaAcceptReceived(int32_t i, vec<int32_t> arrayList);
+
+    wcdmaNetChanged(int32_t i, vec<int32_t> arrayList);
+
+    wcdmaNetToKoreaChanged(int32_t i, vec<int32_t> arrayList);
+
+    wcdmaRejectReceived(int32_t i, vec<int32_t> arrayList);
+}
